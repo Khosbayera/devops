@@ -10,9 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
           SONAR_TOKEN: 97f12ce7146ad0a5ff86002bc33448f355f4ea85
+        with:
+          args: >
+            -Dsonar.organization=khosbayera
+            -Dsonar.projectKey=Khosbayera_devops
