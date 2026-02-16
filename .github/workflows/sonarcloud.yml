@@ -11,6 +11,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: SonarSource/sonarcloud-github-action@master
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN:  97f12ce7146ad0a5ff86002bc33448f355f4ea85
